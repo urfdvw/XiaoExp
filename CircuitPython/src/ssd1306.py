@@ -241,7 +241,7 @@ class SSD1306_I2C(_SSD1306):
         page_addressing=False,
         font_name="font5x8.bin",
     ):
-        self.i2c_device = i2c_device.I2CDevice(busio.I2C(SCL, SDA), addr)
+        self.i2c_device = i2c_device.I2CDevice(busio.I2C(SCL, SDA, frequency=int(1e6)), addr)
         self.addr = addr
         self.page_addressing = page_addressing
         self.temp = bytearray(2)
