@@ -16,6 +16,7 @@ In common
 Difference
 - XiaoExp is way cheaper.
 - XiaoExp only has any basic IO peripherals (touch buttons, an OLED screen, and a buzzer), while Playground has a variety of peripherals.
+    - Instructors can choose which peripherals to solder on board.
     - Instructors can choose which other peripherals to add to the experiment kit.
 - XiaoExp prefers OLED over RGB LEDs to show more information
 - XiaoExp prioritizes touch buttons over alligator clips.
