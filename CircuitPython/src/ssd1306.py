@@ -225,6 +225,7 @@ class _SSD1306:
             self.write_cmd(y)
             self.write_cmd(self.pages - 1)
 
+xiaoi2c = busio.I2C(SCL, SDA, frequency=int(1e6))
 
 class SSD1306_I2C(_SSD1306):
     """ I2C class for SSD1306 """
@@ -235,13 +236,14 @@ class SSD1306_I2C(_SSD1306):
         SDA=board.SDA,
         width=128,
         height=64,
+        i2c=xiaoi2c,
         addr=0x3C,
         external_vcc=False,
         reset=None,
         page_addressing=False,
         font_name="font5x8.bin",
     ):
-        self.i2c_device = i2c_device.I2CDevice(busio.I2C(SCL, SDA, frequency=int(1e6)), addr)
+        self.i2c_device = i2c_device.I2CDevice(i2c, addr)
         self.addr = addr
         self.page_addressing = page_addressing
         self.temp = bytearray(2)
