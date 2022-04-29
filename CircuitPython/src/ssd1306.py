@@ -170,11 +170,6 @@ class _SSD1306:
         self.write_cmd(SET_DISP | 0x00)
         self._power = False
 
-    def contrast(self, contrast):
-        """Adjust the contrast"""
-        self.write_cmd(SET_CONTRAST)
-        self.write_cmd(contrast)
-
     def invert(self, invert):
         """Invert all pixels on the display"""
         self.write_cmd(SET_NORM_INV | (invert & 1))
@@ -225,15 +220,13 @@ class _SSD1306:
             self.write_cmd(y)
             self.write_cmd(self.pages - 1)
 
-xiaoi2c = busio.I2C(SCL, SDA, frequency=int(1e6))
+xiaoi2c = busio.I2C(board.SCL, board.SDA, frequency=int(1e6))
 
 class SSD1306_I2C(_SSD1306):
     """ I2C class for SSD1306 """
 
     def __init__(
         self,
-        SCL=board.SCL,
-        SDA=board.SDA,
         width=128,
         height=64,
         i2c=xiaoi2c,
