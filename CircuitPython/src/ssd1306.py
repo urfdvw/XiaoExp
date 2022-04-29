@@ -251,7 +251,7 @@ class SSD1306_I2C(_SSD1306):
             external_vcc=external_vcc,
             reset=reset,
             page_addressing=self.page_addressing,
-            font_name="font5x8.bin",
+            font_name=font_name,
         )
 
     def write_cmd(self, cmd):
