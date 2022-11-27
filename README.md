@@ -14,15 +14,15 @@ In common
 - StemmaQT support
 
 Difference
-- XiaoExp is way cheaper.
+- XiaoExp + Xiao is way cheaper.
 - XiaoExp only has any basic IO peripherals (touch buttons, an OLED screen, and a buzzer), while Circuit Playground has a variety of peripherals.
     - Instructors can choose which peripherals to solder on the XiaoExp board.
     - Instructors can choose which other peripherals to add to the experiment kit.
 - XiaoExp prefers OLED over RGB LEDs to show more information
 - XiaoExp prioritizes touch buttons over alligator clips.
-    - XiaoExp has a better layout for touch.
+    - XiaoExp has a better layout for touch navigation.
 - All components on the XiaoExp are through-hole instead of surface-mount.
-    - As a result, students with minimum soldering experience can make one on their own.
+    - Students with minimum soldering experience can make one on their own.
 - Female headers are used on the Xiao for connecting DuPont jumper wires to modules or breadboard circuits.
     - The female headers also serve as support for the OLED screen
 - XiaoExp uses 3 AAA batteries instead of LiPo.
