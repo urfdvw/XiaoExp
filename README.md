@@ -57,8 +57,6 @@ Difference
     - 3 * AAA battery case
     - power switch
     - diode prevent charging
-- Reset Pad
-    - GND pad on the back
 
 Solder the compoments accoding to the need.
 
