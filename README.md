@@ -62,11 +62,14 @@ Solder the compoments accoding to the need.
 
 # Code in the repository
 - CircuitPython
-    - scr: files before compiling
+    - scr: source files of the used modules
     - release: files to be copied to Xiao
     - examples: some sensor examples
 - Arduino
-    - TODO: sensor interface code
+    - sensor interface
+        - compiled.UF2: compiled file, drage in to boot drive
+        - code/: adduino project
+        - menu generator/: Python notebook for generating static data for the UI.
 
 ## I2C 1306 Screen CircuitPython Library
 Usually, in SAMD21 + CircuitPython projects,
@@ -80,4 +83,4 @@ not images.
 
 Please see the [source code](./CircuitPython/src/ssd1306.py) for details.
 
-TODO: Document for the library.
+TODO: Documentation
