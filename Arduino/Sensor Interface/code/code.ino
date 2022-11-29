@@ -158,7 +158,7 @@ void read_sensor(){
     beta = 0;
   }
   // calculation
-  voltage = filtered * 0.0043988; // /1023*4.5
+  voltage = filtered * 3.3 / 1024;
   sensor_r = float(regular_r) / (1023.0 - filtered) * filtered;
   if (filtered > 1022.0){
     sensor_r = 9999.99;
